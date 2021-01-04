@@ -1,1 +1,136 @@
-/* No CSS *//*# sourceMappingURL=style.css.map */
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Kumbh Sans";
+  font-size: 14px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#af67e9), to(#6565e7));
+  background: linear-gradient(#af67e9, #6565e7);
+  height: 100vh;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 auto;
+}
+
+img {
+  width: 100%;
+}
+
+.container {
+  width: 80%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 15px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 45% 55%;
+      grid-template-columns: 45% 55%;
+  gap: 2rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  width: 950px;
+  height: 600px;
+  margin: 0 auto;
+}
+
+.card::before {
+  content: '';
+  background-image: url("../images/bg-pattern-desktop.svg");
+  background-position: left -552px bottom -125px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.card::after {
+  content: '';
+  background-image: url(../images/illustration-woman-online-desktop.svg);
+  background-position: left -93px center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 450px;
+  height: 391px;
+  position: absolute;
+}
+
+.card .orange-box {
+  position: absolute;
+  top: 46%;
+  left: -8%;
+  width: 160px;
+  height: 160px;
+  z-index: 1;
+}
+
+.card .faq-container {
+  margin: 0 4rem;
+  padding: 2rem  0;
+}
+
+.card .faq-container h1 {
+  margin-bottom: 1.5rem;
+}
+
+.card .faq-container details {
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #e7e7e9;
+}
+
+.card .faq-container details:last-child {
+  border-bottom: none;
+}
+
+.card .faq-container details[open] summary {
+  color: #1d1e35;
+  font-weight: 700;
+}
+
+.card .faq-container details summary {
+  position: relative;
+  padding: 1rem 0 0;
+  cursor: pointer;
+  outline: none;
+}
+
+.card .faq-container details summary::-webkit-details-marker {
+  position: absolute;
+  right: 5px;
+  background: url("../images/icon-arrow-down.svg") center no-repeat;
+  color: transparent;
+}
+
+.card .faq-container details summary:hover {
+  color: #f47c57;
+}
+
+.card .faq-container details p {
+  width: 80%;
+  margin-top: 0.5rem;
+  font-size: 13px;
+  line-height: 1.5;
+}
+/*# sourceMappingURL=style.css.map */
