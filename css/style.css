@@ -9,6 +9,7 @@
 body {
   font-family: "Kumbh Sans";
   font-size: 14px;
+  font-weight: 400;
   background: -webkit-gradient(linear, left top, left bottom, from(#af67e9), to(#6565e7));
   background: linear-gradient(#af67e9, #6565e7);
   height: 100vh;
@@ -56,9 +57,9 @@ img {
 }
 
 .card::before {
-  content: '';
+  content: "";
   background-image: url("../images/bg-pattern-desktop.svg");
-  background-position: left -526px bottom -114px;
+  background-position: left -552px bottom -125px;
   background-size: cover;
   background-repeat: no-repeat;
   width: 100%;
@@ -67,32 +68,52 @@ img {
 }
 
 .card::after {
-  content: '';
+  content: "";
   background-image: url("../images/illustration-woman-online-desktop.svg");
-  background-position: left -170px center;
+  background-position: left -93px center;
   background-size: cover;
   background-repeat: no-repeat;
   width: 450px;
-  height: 388px;
+  height: 391px;
   position: absolute;
 }
 
-.card .orange-box {
+.card .bg-img {
   position: absolute;
-  top: 44%;
-  left: -9%;
-  width: 170px;
-  height: 170px;
-  z-index: 1;
+  top: 43%;
+  left: -10%;
+  background: url("../images/illustration-box-desktop.svg") no-repeat;
+  width: 150px;
+  height: 150px;
+  z-index: 2;
 }
 
 .card .faq-container {
-  margin: 0 4rem;
-  padding: 2rem  0;
+  width: 50%;
+  padding: 2rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  z-index: 5;
+}
+
+.card .faq-container .faq-inner-container {
+  width: 85%;
 }
 
 .card .faq-container h1 {
   margin-bottom: 1.5rem;
+  color: #1d1e35;
 }
 
 .card .faq-container details {
@@ -104,16 +125,12 @@ img {
   border-bottom: none;
 }
 
-.card .faq-container details[open] summary {
-  color: #1d1e35;
-  font-weight: 700;
-}
-
 .card .faq-container details summary {
   position: relative;
   padding: 1rem 0 0;
   cursor: pointer;
   outline: none;
+  color: #4a4b5e;
 }
 
 .card .faq-container details summary::-webkit-details-marker {
@@ -127,11 +144,21 @@ img {
   color: #f47c57;
 }
 
+.card .faq-container details[open] summary {
+  color: #1d1e35;
+  font-weight: 700;
+}
+
+.card .faq-container details[open] summary::-webkit-details-marker {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
 .card .faq-container details p {
-  width: 80%;
   margin-top: 0.5rem;
-  font-size: 13px;
+  font-size: 12.5px;
   line-height: 1.5;
+  color: #787887;
 }
 
 @media (max-width: 375px) {
@@ -157,7 +184,7 @@ img {
     left: 0;
   }
   .card::after {
-    content: '';
+    content: "";
     background-image: url("../images/illustration-woman-online-mobile.svg");
     background-size: cover;
     background-repeat: no-repeat;
