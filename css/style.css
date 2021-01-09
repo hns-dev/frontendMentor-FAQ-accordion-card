@@ -10,116 +10,91 @@ body {
   font-family: "Kumbh Sans";
   font-size: 14px;
   font-weight: 400;
-  background: -webkit-gradient(linear, left top, left bottom, from(#af67e9), to(#6565e7));
-  background: linear-gradient(#af67e9, #6565e7);
+  background: -webkit-gradient(linear, left top, left bottom, from(#af67e9), to(#6565e7)) no-repeat;
+  background: linear-gradient(#af67e9, #6565e7) no-repeat;
   height: 100vh;
-  overflow: hidden;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin: 0 auto;
+  margin: calc(100vh - 75vh) auto;
 }
 
 .container {
-  width: 80%;
-  max-width: 1440px;
+  border-radius: 15px;
+  width: 90%;
   margin: 0 auto;
 }
 
 .card {
   background-color: #fff;
+  padding: 2.5rem 0;
   border-radius: 15px;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 45% 55%;
-      grid-template-columns: 45% 55%;
-  gap: 2rem;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  position: relative;
-  height: 600px;
+}
+
+img {
+  width: 100%;
+}
+
+.bg-imgs {
+  width: 273px;
+  height: 115px;
   margin: 0 auto;
 }
 
-.card::before {
-  content: "";
-  background-image: url("../images/bg-pattern-desktop.svg");
-  background-position: left -687px bottom -180px;
-  background-size: cover;
-  background-repeat: no-repeat;
+.bg-imgs-container {
+  position: relative;
   width: 100%;
   height: 100%;
+  top: -95%;
+  margin: 0 auto;
+}
+
+.bg-pattern {
   position: absolute;
+  top: 15%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 315px;
+  height: 215px;
+  background: tomato;
+  background: url("../images/bg-pattern-mobile.svg") no-repeat center center/80%;
 }
 
-.card::after {
-  content: "";
-  background-image: url("../images/illustration-woman-online-desktop.svg");
-  background-position: left -104px center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  width: 488px;
-  height: 432px;
+.woman {
   position: absolute;
+  top: -47%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 315px;
+  height: 215px;
+  background: tomato;
+  background: url("../images/illustration-woman-online-desktop.svg") no-repeat center center/80%;
 }
 
-.card .bg-img {
+.box {
   position: absolute;
-  top: 43%;
-  left: -8%;
-  background: url("../images/illustration-box-desktop.svg") no-repeat;
-  width: 150px;
-  height: 150px;
-  z-index: 2;
+  top: 7%;
+  left: -6%;
+  width: 140px;
+  height: 140px;
+  background: url("../images/illustration-box-desktop.svg") no-repeat center center/80%;
 }
 
-.card .faq-container {
-  width: 50%;
-  padding: 2rem;
-  position: absolute;
-  right: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  z-index: 5;
+.faq-container {
+  padding: 0 1.5rem;
 }
 
-.card .faq-container .faq-inner-container {
-  width: 85%;
-}
-
-.card .faq-container h1 {
+.faq-container h1 {
   margin-bottom: 1.5rem;
   color: #1d1e35;
+  text-align: center;
 }
 
-.card .faq-container details {
+.faq-container details {
   padding-bottom: 1rem;
   border-bottom: 1px solid #e7e7e9;
 }
 
-.card .faq-container details:last-child {
-  border-bottom: none;
-}
-
-.card .faq-container details summary {
+.faq-container details summary {
   position: relative;
   padding: 1rem 0 0;
   cursor: pointer;
@@ -127,80 +102,119 @@ body {
   color: #4a4b5e;
 }
 
-.card .faq-container details summary::-webkit-details-marker {
+.faq-container details summary::-webkit-details-marker {
   position: absolute;
   right: 5px;
   background: url("../images/icon-arrow-down.svg") center no-repeat;
   color: transparent;
 }
 
-.card .faq-container details summary:hover {
+.faq-container details summary:hover {
   color: #f47c57;
 }
 
-.card .faq-container details[open] summary {
+.faq-container details[open] summary {
   color: #1d1e35;
   font-weight: 700;
 }
 
-.card .faq-container details[open] summary::-webkit-details-marker {
+.faq-container details[open] summary::-webkit-details-marker {
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
 }
 
-.card .faq-container details p {
+.faq-container details p {
   margin-top: 0.5rem;
   font-size: 12.5px;
   line-height: 1.5;
   color: #787887;
+  width: 95%;
 }
 
-@media (max-width: 375px) {
-  .container {
-    width: 95%;
+@media (min-width: 500px) {
+  .faq-container {
+    padding: 0 2.5rem;
   }
-  .card {
-    width: 330px;
-    height: 500px;
-    -ms-grid-columns: 100%;
-        grid-template-columns: 100%;
-    -ms-grid-rows: 20% 80%;
-        grid-template-rows: 20% 80%;
-    position: relative;
-  }
-  .card::before {
-    background-position: top center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    width: 98%;
-    height: 53%;
-    position: absolute;
-    top: -35%;
-    left: 45%;
-    -webkit-transform: translateX(-50%);
-            transform: translateX(-50%);
-  }
-  .card::after {
-    background-image: url("../images/illustration-woman-online-desktop.svg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    width: 280px;
-    height: 220px;
-    position: absolute;
-    top: -20%;
-    left: 50%;
-    -webkit-transform: translateX(-50%);
-            transform: translateX(-50%);
-  }
-  .card .bg-img {
-    display: none;
-  }
-  .card .faq-container {
-    width: 100%;
-    padding: 0;
+}
+
+@media (min-width: 800px) {
+  body {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+    padding: 4rem 0 0;
+  }
+  .faq-container {
+    padding: 0 4rem;
+  }
+}
+
+@media (min-width: 1050px) {
+  .container {
+    width: 80%;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  .card {
+    padding: 0;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    -ms-grid-rows: minmax(600px, auto);
+        grid-template-rows: minmax(600px, auto);
+  }
+  .bg-imgs {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .bg-imgs-container {
+    margin: 0;
+    top: 0;
+  }
+  .bg-pattern {
+    top: 0;
+    background: url("../images/bg-pattern-desktop.svg") no-repeat;
+    background-size: 220%;
+    background-position: 109% 69%;
+    width: 100%;
+    height: 100%;
+  }
+  .woman {
+    top: 0%;
+    background: url("../images/illustration-woman-online-desktop.svg") no-repeat;
+    background-size: 110%;
+    background-position: 210% 41%;
+    width: 100%;
+    height: 100%;
+  }
+  .box {
+    top: 39.4%;
+    left: -20%;
+    width: 200px;
+    height: 200px;
+    background-size: 100%;
+  }
+  .faq-container {
+    -ms-grid-column-align: center;
+        justify-self: center;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    width: 100%;
+    padding: 4rem 4rem;
+  }
+  .faq-container h1 {
     text-align: left;
   }
 }
